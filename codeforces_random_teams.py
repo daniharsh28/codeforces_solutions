@@ -10,9 +10,9 @@ if m == 1:
 	maxiInOneCluster = minInOneCluster = n * (n-1) / 2
 	print minInOneCluster, maxiInOneCluster
 elif m == n:
-	print 0, (m -n) * (m - n - 1)/2
+	print 0, (m - n) * (m - n - 1)/2
 else:
-	# For min try to divide as evenly as possible
+
 	minInCluster = n / m 
 	entriesInCluster = [n/m for _ in xrange(m)]
 
@@ -24,7 +24,7 @@ else:
 		if entry >= 2:
 			totalMin += entry * (entry - 1) / 2
 
-	# For maximum try to assign 1 to each cluster
+
 	maxiInOneCluster = n - (m-1)
 
 	print totalMin , maxiInOneCluster * (maxiInOneCluster - 1)/2
