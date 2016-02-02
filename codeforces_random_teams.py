@@ -13,22 +13,17 @@ elif m == n:
 	print 0, (m - n) * (m - n - 1)/2
 else:
 
-	minInCluster = n / m 
-	entriesInCluster = [n/m for _ in xrange(m)]
-
-	for i in xrange(n % m):
-		entriesInCluster[i] += 1
+	numOfEntriesInCluster = n / m 
+	
+	numOfEntriesWithModulus =  n % m 
+	numOfEntriesWithoutModulus = m - numOfEntriesWithModulus
 
 	totalMin = 0
-	for entry in entriesInCluster:
-		if entry >= 2:
-			totalMin += entry * (entry - 1) / 2
-
+	if numOfEntriesInCluster >=2 :
+		totalMin +=  numOfEntriesWithoutModulus * numOfEntriesInCluster * (numOfEntriesInCluster-1) / 2
+		
+	totalMin += numOfEntriesWithModulus * (numOfEntriesInCluster) * (numOfEntriesInCluster + 1) / 2
 
 	maxiInOneCluster = n - (m-1)
 
 	print totalMin , maxiInOneCluster * (maxiInOneCluster - 1)/2
-
-
-
-
