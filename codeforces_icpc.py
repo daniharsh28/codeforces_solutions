@@ -12,5 +12,5 @@ arr = [int(x) for x in inp]
 arr.sort()
 for i in range(0,len(arr),3):
 	x = arr[i+2]
-	if (x + k < 5):
+	#if (x + k < 5):
 		
