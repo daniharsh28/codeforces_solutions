@@ -15,7 +15,7 @@ for i in xrange(len(arr)-1,-1,-1):
 	database.add(arr[i])
 	count.append(len(database))
 
-print count
+#print count
 #print database
 
 for _ in range(m):

@@ -9,7 +9,6 @@ for i in range(1,len(inp)):
 	else:
 		arr.append(arr[-1])
 
-print arr
 m = int(raw_input())
 for _ in range(m):
 	query = raw_input().split()

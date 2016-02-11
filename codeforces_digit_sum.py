@@ -14,8 +14,8 @@ for i in range(n-1):
 
 end = 9
 multiplier = 0
-for i in range(n-1):
-	multiplier += math.pow(10,i+1)
+for i in range(n):
+	multiplier += math.pow(10,i)
 
 end = end * multiplier
 
